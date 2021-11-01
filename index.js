@@ -57,7 +57,7 @@ async function run() {
             const confirmOrder = req.body;
             // console.log('this is', confirmOrder);
             const result = await confirmOrderCollection.insertOne(confirmOrder)
-            res.send(result);
+            res.json(result);
         })
 
         app.delete('/orders/:id', async (req, res) => {
